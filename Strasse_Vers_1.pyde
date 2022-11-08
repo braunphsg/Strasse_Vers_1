@@ -1,3 +1,9 @@
+# SETUP -------------------------------------------------------------------------
+def setup():
+    size(1500,400)#Fenstergrösse
+    background(255, 255, 255)#Fenster Hintergrundfarbe
+    bild = loadImage("fussgaenger.png")
+
 # DEF DRAW -------------------------------------------------------------------------------------------------
 def draw():
     # STRASSE ----------------------------------------------------------------------------------------------
@@ -33,8 +39,8 @@ def draw():
         fill(251, 197, 0)#Farbe
         rect(1000, 204 + i*30, 100, 20)#Umfang Seitenline
     
-    #BILD DER FUSSGÄNGER LADEN
-    #image(bild, 800, 100)
+    #BILD DER FUSSGÄNGER LADEN -----------------------------------------------------------------------------
+    image(bild, 800, 100)
     
     
     
