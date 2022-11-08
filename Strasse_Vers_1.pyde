@@ -2,7 +2,7 @@
 def setup():
     size(1500,400)#Fenstergrösse
     background(255, 255, 255)#Fenster Hintergrundfarbe
-    bild = loadImage("fussgaenger.png")
+    #bild = loadImage("fussgaenger.png")
 
 # DEF DRAW -------------------------------------------------------------------------------------------------
 def draw():
@@ -38,9 +38,15 @@ def draw():
         noStroke
         fill(251, 197, 0)#Farbe
         rect(1000, 204 + i*30, 100, 20)#Umfang Seitenline
+        
+    # FUSSGÄNGERSTREIFEN UNTERHALB DER MITTELLINIE ------------------------------
+    for i in range(3):
+        noStroke
+        fill(251, 197, 0)#Farbe
+        rect(1000, 204 + i *30, 100, 20)#Umfang Seitenlinie
     
     #BILD DER FUSSGÄNGER LADEN -----------------------------------------------------------------------------
-    image(bild, 800, 100)
+    #image(bild, 800, 100)
     
     
     
