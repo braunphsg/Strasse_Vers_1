@@ -40,7 +40,7 @@ def strasse():
         rect(1000, 204 + i *30, 100, 20)#Umfang Seitenlinie
         
     #BILD DER FUSSGÄNGER UND BÄUME LADEN -----------------------------------------------------------------------------
-    image(img1, 1030, 0, 40,90)
-    for i in range(4):
-        image(img2, 400 + i*100, 310, 80,80)
-    image(img3, 300, 10, 100, 60)
+    #image(img1, 1030, 0, 40,90)
+    #for i in range(4):
+        #image(img2, 400 + i*100, 310, 80,80)
+    #image(img3, 300, 10, 100, 60)
