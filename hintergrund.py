@@ -33,13 +33,13 @@ def strasse():
         fill(251, 197, 0)#Farbe
         rect(1000, 204 + i*30, 100, 20)#Umfang Seitenline
             
-    # FUSSGÄNGERSTREIFEN UNTERHALB DER MITTELLINIE ------------------------------
+    # FUSSGAENGERSTREIFEN UNTERHALB DER MITTELLINIE ------------------------------
     for i in range(3):
         noStroke
         fill(251, 197, 0)#Farbe
         rect(1000, 204 + i *30, 100, 20)#Umfang Seitenlinie
         
-    #BILD DER FUSSGÄNGER UND BÄUME LADEN -----------------------------------------------------------------------------
+    #BILD DER FUSSGAENGER UND BAEUME LADEN -----------------------------------------------------------------------------
     #image(img1, 1030, 0, 40,90)
     #for i in range(4):
         #image(img2, 400 + i*100, 310, 80,80)
