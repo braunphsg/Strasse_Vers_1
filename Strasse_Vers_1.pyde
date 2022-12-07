@@ -1,11 +1,14 @@
-# SETUP -------------------------------------------------------------------------
+#Startposition Anfang der Strasse
+xPos = 30
+#Geschwindigkeit des Autos
+offset = 4
 
-xPos = 50
-offset = 5
-
+# Funktion Strasse wird aus der Datei hintergrund geladen
 from hintergrund import strasse
 
+# SETUP -------------------------------------------------------------------------
 def setup():
+    
     size(1500,400)#Fenstergrösse
     background(255, 255, 255)#Fenster Hintergrundfarbe 
     global img1
@@ -13,14 +16,17 @@ def setup():
     global img3
     global img3
     global img4
+    global modus
     img1 = loadImage("fussgaenger.jpg")
     img2 = loadImage("baum.jpg")
     img3 = loadImage("bank.jpg")
     img4 = loadImage("auto.jpg")
     
+    modus = "fahren"   
+   
+
 # DEF DRAW -------------------------------------------------------------------------------------------------
 def draw():
-    
     strasse()
     image(img1, 1030, 0, 40,90)
     for i in range(4):
@@ -29,11 +35,20 @@ def draw():
     
     global xPos
     global offset
+    global modus
     
     print xPos
-    image(img4, xPos, 200, 200, 100)
+    image(img4, xPos, 203, 160, 80)
     
-    xPos = xPos + offset
+    if modus == "fahren":
+        xPos = xPos + offset
+
+    
+def keyPressed():
+    global modus
+    modus = "stop"
+
+
     
 
 

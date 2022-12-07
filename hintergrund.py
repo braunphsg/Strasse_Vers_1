@@ -38,9 +38,3 @@ def strasse():
         noStroke
         fill(251, 197, 0)#Farbe
         rect(1000, 204 + i *30, 100, 20)#Umfang Seitenlinie
-        
-    #BILD DER FUSSGAENGER UND BAEUME LADEN -----------------------------------------------------------------------------
-    #image(img1, 1030, 0, 40,90)
-    #for i in range(4):
-        #image(img2, 400 + i*100, 310, 80,80)
-    #image(img3, 300, 10, 100, 60)
