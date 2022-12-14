@@ -23,10 +23,16 @@ def setup():
     img4 = loadImage("auto.jpg")
     
     modus = "fahren"   
-   
 
+def ball():
+    noStroke
+    fill(210, 105, 30)#Farbe
+    circle(10,10,25)
+
+            
 # DEF DRAW -------------------------------------------------------------------------------------------------
 def draw():
+    ball()
     strasse()
     image(img1, 1030, 0, 40,90)
     for i in range(4):
@@ -47,13 +53,6 @@ def draw():
 def keyPressed():
     global modus
     modus = "stop"
-
-
-    
-
-
-
-        
 
 
 
