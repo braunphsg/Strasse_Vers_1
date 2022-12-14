@@ -70,9 +70,12 @@ def keyPressed():
     modus = "stop"
     
 # Definition Ball
+
+i = random(xPos +250,1450)
+
 def ball(yPos):
     noStroke
     fill(210, 105, 30)#Farbe
-    circle(1400,yPos,30)
+    circle(i,yPos,30)
 
     
