@@ -1,4 +1,4 @@
-#Startposition Anfang der Strasse
+#Startposition Auto
 xPos = 30
 #Geschwindigkeit des Autos
 offset = 4
@@ -6,10 +6,11 @@ offset = 4
 #Startposition Ball
 yPos = 50
 #Geschwindikeit Ball
-offsetball = 3
+offsetball = 6
 
 # Funktion Strasse wird aus der Datei hintergrund geladen
 from hintergrund import strasse
+
 
 # SETUP -------------------------------------------------------------------------
 def setup():
@@ -28,29 +29,35 @@ def setup():
     img4 = loadImage("auto.jpg")
     
     modus = "fahren"   
-
-            
+                    
+                                                
 # DEF DRAW -------------------------------------------------------------------------------------------------
 def draw():
-    background(255, 255, 255)
-    strasse() #FUnktion Strasse aufrufen
+    background(255, 255, 255) #Weisser Hintergrund
+    strasse() #Funktion Strasse aufrufen
     image(img1, 1030, 0, 40,90)
+    #Bilder (Bäume) aufrufen
     for i in range(4):
         image(img2, 400 + i*100, 310, 80,80)
+    #Bild (Bank) laden
     image(img3, 300, 10, 100, 60)
 
-#Fahrt Auto von links nach rechts
+#Autofahrt
     global xPos
     global offset
     global modus
+
+    image(img4, xPos, 203, 160, 80) #Bild Auto aufrufen
     
-    #print xPos
-    image(img4, xPos, 203, 160, 80)
-    
+    #Positionsänderung Autobild = Auto fährt
     if modus == "fahren":
         xPos = xPos + offset
-        
-# Ball rollt rein
+    
+    #Bei Crash, stoppt das Auto und Lose erscheint
+    if xPos > i +200:
+        offset = 0
+            
+# Ballrollen
     global yPos
     global offsetball
     
@@ -58,20 +65,26 @@ def draw():
     
     print yPos
 
+    #Positionsänderung Ball = Ball rollt rein
     yPos = yPos + offsetball
 
     if yPos > height - 155:
         offsetball = 0
 
-
-#Fahrt wird durch Taste unterbrochen
+#Fahrt wird durch Leer-Taste unterbrochen
 def keyPressed():
+    if (key == ' '):
+        global modus
+        modus = "stop"
+
+    else:
+        xPos + offset
+    
+    
     global modus
     modus = "stop"
-    
-# Definition Ball
 
-i = random(xPos +250,1450)
+i = random(xPos +250, xPos +350)
 
 def ball(yPos):
     noStroke
