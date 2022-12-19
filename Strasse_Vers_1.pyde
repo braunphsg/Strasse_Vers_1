@@ -56,6 +56,10 @@ def draw():
     #Bei Crash, stoppt das Auto und Lose erscheint
     if xPos > i +200:
         offset = 0
+        boxlose()
+    
+    else: 
+        boxwin()
             
 # Ballrollen
     global yPos
@@ -80,11 +84,21 @@ def keyPressed():
     else:
         xPos + offset
 
+
 i = random(xPos +250, xPos +350)
 
 def ball(yPos):
     noStroke
     fill(210, 105, 30)#Farbe
     circle(i,yPos,30)
-
+    
+def boxlose():
+    noStroke
+    fill(255, 110, 74)#Farbe
+    circle(750,200,100)
+    
+def boxwin():
+    noStroke
+    fill(124,252,0)#Farbe
+    circle(750,200,100)
     
