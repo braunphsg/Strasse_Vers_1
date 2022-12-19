@@ -79,10 +79,6 @@ def keyPressed():
 
     else:
         xPos + offset
-    
-    
-    global modus
-    modus = "stop"
 
 i = random(xPos +250, xPos +350)
 
